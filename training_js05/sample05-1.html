@@ -8,21 +8,21 @@
 <body>
     <h1>変数の演算</h1>
     <p>a=10、b=4の場合</p>
-    <button onclick="show()">足し算</button>
-    <button onclick="show(1)">引き算</button>
-    <button onclick="show(2)">掛け算</button>
-    <button onclick="show(3)">割り算</button>
+    <button onclick="add()">足し算</button>
+    <button onclick="subtract()">引き算</button>
+    <button onclick="multiply()">掛け算</button>
+    <button onclick="divide()">割り算</button>
 
     <script>
         let a =10;
         let b = 4;
         let ans = 0;
-        function show(){
+        function add(){
             ans = a + b;
             alert(ans);
         }
 
-        function show(){
+        function subtract(){
             ans = a - b;
             alert(ans);
         }
