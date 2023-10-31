@@ -9,9 +9,9 @@
     <h1>変数の演算</h1>
     <p>a=10、b=4の場合</p>
     <button onclick="add()">足し算</button>
-    <button onclick="subtract()">引き算</button>
-    <button onclick="multiply()">掛け算</button>
-    <button onclick="divide()">割り算</button>
+    <button onclick="subtract(1)">引き算</button>
+    <button onclick="multiply(2)">掛け算</button>
+    <button onclick="divide(3)">割り算</button>
 
     <script>
         let a =10;
@@ -22,9 +22,17 @@
             alert(ans);
         }
 
-        function subtract(){
+        function subtract(1){
             ans = a - b;
             alert(ans);
+        }
+        function multiply(2){
+            ans = a*b;
+            alert(ans)
+        }
+        function divide(3){
+            ans = a/b;
+            alert(ans)
         }
     </script>
 </body>
