@@ -7,13 +7,13 @@
 </head>
 <body>
     <h1>人口の多い国ランキング</h1>
-    <ol id="country">
+    <ol id="countryList">
         <li>中国</li>
         <li>インド</li>
         <li>アメリカ</li>
         <li>インドネシア</li>
     </ol>
-    <button onclick="get_li()">国旗で表示</button>
+    <button onclick="displayFlags()">国旗で表示</button>
 
     <script>
         function displayFlags(){
@@ -24,8 +24,8 @@
                 console.log(flagImage);
             });
         }
-        function getFlagImage(countryName){
 
+        function getFlagImage(countryName){
             switch(countryName) {
                 case "中国":
                     return "flag_CHN.png";
@@ -37,8 +37,6 @@
                     return "flag_IDN.png";
             }
         }
-    </script>
-
     </script>
 </body>
 </html>
