@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>人口の多い国ランキング</h1>
-    <ol id="">
+    <ol id="country">
         <li>中国</li>
         <li>インド</li>
         <li>アメリカ</li>
@@ -16,9 +16,26 @@
     <button onclick="get_li()">国旗で表示</button>
 
     <script>
-        function get_li(){
-            let list = document.querySelectorAll('li')
-            console.log(flag_CHN.png,flag_IDN.png,flag_IND.png,flag_USA.png)
+        function displayFlags(){
+            let countries = document.querySelectorAll('#countryList li');
+            countries.forEach(country => {
+                let flagName = country.textContent;
+                let flagImage = getFlagImage(flagName);
+                console.log(flagImage);
+            });
+        }
+        function getFlagImage(countryName){
+
+            switch(countryName) {
+                case "中国":
+                    return "flag_CHN.png";
+                case "インド":
+                    return "flag_IND.png";
+                case "アメリカ":
+                    return "flag_USA.png";
+                case "インドネシア":
+                    return "flag_IDN.png";
+            }
         }
     </script>
 
