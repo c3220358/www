@@ -6,20 +6,22 @@
     <title>要素の取得と内容の変更</title>
 </head>
 <style>
-    #span{
+    #messageStatus{
         color: red;
     }
 </style>
 <body>
     <h1>座席の予約</h1>
-    <p> 東京会場<strong id="span">（予約受付中）</strong> </p>
+    <p> 東京会場 <strong id="messageStatus">（予約受付中）</strong></p>
     <p id="message"><button onclick="showAnser();">予約する</button></p>
-
     <script>
         function showAnser(){
-            let anserBox = document.getElementById('message','span');
-            anserBox.innerHTML = 'ありがとうございました。';
-        }
+            let messageElement= document.getElementById("messageStatus");
+            messageElement.textContent = "(予約済み)";
+
+            let anserBox = document.getElementById('message',);
+            anserBox.innerHTML = '<strong>ありがとうございました。</strong>';       
+         }
     </script>
     
 </body>
