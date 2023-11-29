@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +7,24 @@
 </head>
 <body>
     <h1>人口の多い国ランキング</h1>
-    <ol id="countryList">
+    <ol id="country">
         <li>中国</li>
         <li>インド</li>
         <li>アメリカ</li>
         <li>インドネシア</li>
     </ol>
-    <button onclick="displayFlags()">国旗で表示</button>
+   <button onclick="showFlags_li()">国旗で表示</button>
 
     <script>
-        function displayFlags(){
-            let countries = document.querySelectorAll('#countryList li');
-            countries.forEach(country => {
-                let flagName = country.textContent;
-                let flagImage = getFlagImage(flagName);
-                console.log(flagImage);
-            });
-        }
-
-        function getFlagImage(countryName){
-            switch(countryName) {
-                case "中国":
-                    return "flag_CHN.png";
-                case "インド":
-                    return "flag_IND.png";
-                case "アメリカ":
-                    return "flag_USA.png";
-                case "インドネシア":
-                    return "flag_IDN.png";
-            }
+        
+         
+        function showFlags_li(){
+            let country = ['<img src ="flag_CHN.png">','<img src = "flag_IDN.png">','<img src = "flag_USA.png">','<img src = "flag_IND.png">'];
+            let list = document.querySelectorAll('li');
+            list[0].innerHTML = country[0];
+            list[1].innerHTML = country[1];
+            list[2].innerHTML = country[2];
+            list[3].innerHTML = country[3];
         }
     </script>
 </body>
