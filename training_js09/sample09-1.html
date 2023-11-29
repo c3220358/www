@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>要素の追加と削除</title>
+    <title>繰り返しの処理</title>
 </head>
 <body>
     <h1>写真の一覧</h1>
-    <p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
-    <button onclick="haikei()">写真を表示</button>
-    
-<script>
-  let imege = ['photo_1.jpg','photo_2.jpg','photo_3.jpg','photo_4.jpg','photo_5.jpg','photo_6.jpg','photo_7.jpg','photo_8.jpg']
-    function haikei(){
-    }
-</script>
+    <p>以下のボタンをクリックすると、一覧表示されます。</p>
+    <button id="contiune" onclick="photo()">写真を表示</button>
+    <div id="photo"></div>
+    <script>
+        
+        function photo(){
+            let img = ['<img src = "photo_1.jpg">','<img src = "photo_2.jpg>','<img src = "photo_3.jpg">','<img src = "photo_4.jpg">','<img src = "photo_5.jpg">','<img src = "photo_6.jpg">','<img src = "photo_7.jpg">','<img src = "photo_8.jpg">']
+            let ulBox = document.getElementById('photo');
+            for (let i = 0;i < img.length; i++) {
+                ulBox.insertAdjacentHTML('beforeend','<div>' + img[i] + '<div>');
+            }
+            document.getElementById('contiune').remove();
+
+            
+        }
+        
+    </script>
 </body>
 </html>
