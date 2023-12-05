@@ -6,6 +6,27 @@
     <title>条件分岐</title>
 </head>
 <body>
-    
+    <h1>問題</h1>
+    <p>最も面積が大きい「県」は何県でしょう？</p>
+    <button onclick="ken()"><div id="ken">ヒントを見る</div></button>
+
+    <p id="message">（注意）北海道は「県」ではありません。</p>
+    <script>
+        let clilkTimes = 0;
+        function ken(){
+            clilkTimes++;
+            switch(clilkTimes){
+                case 1:
+                document.getElementById('ken',).textContent = '答えを見る';
+                document.getElementById('message',).textContent = '東北にあります。';
+                break;
+                default:
+                document.getElementById('message',).textContent = '答えは岩手県です。';
+                break;
+
+            }
+
+        }
+    </script>
 </body>
 </html>
