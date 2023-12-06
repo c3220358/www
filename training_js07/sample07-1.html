@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>おはようございます</title>
 </head>
+
 <body>
-    
+    <h1>「おはようございます」を言えるのは何時まで？</h1>
+    <div id="greetings()"></div>
+    <script>
+        function greetings(){
+            const today = new date()
+            const hour = document.getHours()
+            if ( hour >= 5 && hour < 9) return "おはようございます"
+            else if(hour >= 18) return "こんにちは"
+            else{
+                return "こんばんは"
+            }
+            
+        }
+    </script>
 </body>
 </html>
