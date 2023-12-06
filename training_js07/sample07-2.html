@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>モーダルダイアログ</h1>
+    
+    <p><button id="ask">開く</button></p>
+
+    <script>
+        function ask(question,yes,no){
+            if (confirm(question)) yes()
+            else no()
+        }
+
+        ask(
+            "次の操作を始めてもいい？"
+           function() { alert("移動する")},
+           function() { alert("このページにとどまる")}
+        )
+    </script>
+</body>
+</html>
