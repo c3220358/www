@@ -12,12 +12,11 @@
     <script>
         function greetings(){
             const today = new date()
-            const hour = document.getHours()
+            const hour = today.getHours()
             if ( hour >= 5 && hour < 9) return "おはようございます"
-            else if(hour >= 18) return "こんにちは"
-            else{
-                return "こんばんは"
-            }
+            else if(hour < 18) return "こんにちは"
+            else return "こんばんは"
+            
             
         }
     </script>
