@@ -8,7 +8,9 @@
 <style>
 
 
-
+.big_font{
+    font-size: 2.0em;
+}
 
 </style>
 </head>
@@ -22,10 +24,34 @@
 <div id="message" class="big_font"></div>
 
 <script>
-    function show(){
+  function show() {
+      let anser = []; 
+      let count = 0; 
+      let x = 1;
+      while (true) {
         
+        let result = Math.pow(x, 3) - 53 * Math.pow(x, 2) + 620 * x - 1036;
+
+        
+        if (result === 0) {
+          anser.push(x); 
+          count++; 
+
+          
+          if (count === 3) {
+            break;
+          }
+        }
+
+        x++; 
+      }
+
+      
+      let message =  anser.join(", ") + "が解です。 " ;
+      document.getElementById("message").textContent = message;
     }
 </script>
+
 </body>
 
 </html>
