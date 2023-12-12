@@ -6,10 +6,9 @@
 <meta charset="UTF-8">
 <title>breakの活用</title>
 <style>
-
-
-
-
+.big_font {
+      font-size: 1.5em;
+    }
 </style>
 </head>
 
@@ -22,8 +21,29 @@
 <div id="message" class="big_font"></div>
 
  <script>
-    function show(){
+        function show() {
+      let anser = []; 
+      let count = 0; 
+
+      for (let x = 1; ; x++) {
+       
+        let result = Math.pow(x, 3) - 53 * Math.pow(x, 2) + 620 * x - 1036;
+
         
+        if (result === 0) {
+          anser.push(x);
+          count++; 
+
+          
+          if (count === 3) {
+            break;
+          }
+        }
+      }
+
+      
+      let message =   anser.join(", ") + "が解です ";
+      document.getElementById("message").textContent = message;
     }
  </script>
 
