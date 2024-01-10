@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件分岐</title>
+    <style>
+        .big_font{
+            font-size: 32px;
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>問題</h1>
+    <p>次の方程式を満たす解を求めなさい。解は二つあります。</p>
+    <p class="big_font"><strong>X<sup>2</sup>-6x+8=0</strong></p>
+    <button onclick="ken(1)">x = 1</button>
+    <button onclick="ken(2)">x = 2</button>
+    <button onclick="ken(3)">x = 3</button>
+    <button onclick="ken(4)">x = 4</button>
+    <button onclick="ken(5)">x = 5</button>
+    <div id="message" class="big_font"></div>
+    <script>
+        function ken(X){
+            if(X == 2  || X == 4 ){
+                document.getElementById('message').textContent = '正解！';
+            } else{
+                document.getElementById('message').textContent = '間違い！';
+            }
+            
+        }
+
+        
+    </script>
+</body>
+</html>
