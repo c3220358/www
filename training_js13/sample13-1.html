@@ -22,6 +22,7 @@
     <div id="message"> ここに結果が表示されます。</div>
         <script>
         function inputcheack(){
+            let text = '';
             let min = parseInt(prompt('範囲の最小値を１～１０で入力してください。'));
             let max = parseInt(prompt('範囲の最大値を１～１０で入力してください。'));
             for(let i = min; i <= max; i++){
@@ -32,6 +33,13 @@
             }
             document.getElementById('message').textContent = text;
 
+        }
+        function inputcheack(num){
+            for (let j = 2; j <= num-1; j++){
+                if(num % j == 0){
+                    return false;
+                }
+            }
         }
     </script>
 </body>
