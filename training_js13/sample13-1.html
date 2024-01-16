@@ -21,20 +21,31 @@
     <button  onclick="inputcheack()">範囲の指定</button>
     <div id="message"> ここに結果が表示されます。</div>
         <script>
-        function inputcheack(){
-            
+        function inputcheack() {
             let min = parseInt(prompt('範囲の最小値を１～１０で入力してください。'));
             let max = parseInt(prompt('範囲の最大値を１～１０で入力してください。'));
-            for(let i = min; i <= max; i++){
-                let flag = inputcheack(i);
-                if(flag){
-                    text = text + i + '、';
-                }
-            }
-            document.getElementById('message').textContent = text ;
+            
+            var number = 1;
 
+            while (true) {
+                var isDivisible = true;
+
+                for (let i = min; i <= max; i++) {
+                    if (number % i !== 0) {
+                        isDivisible = false;
+                        break;
+                    }
+                }
+
+                if (isDivisible) {
+                    document.getElementById("result").innerHTML = "最小の割り切れる数: " + number;
+                    break;
+                }
+
+                number++;
+            }
         }
-     
+
     </script>
 </body>
 </html>
